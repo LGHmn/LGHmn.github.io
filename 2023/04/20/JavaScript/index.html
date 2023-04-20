@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="黎功浩">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/04/20/javascript/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="JavaScript概念及入门scanner1234567891011121314概念	一种运行在客户端的脚本语言(script就是脚本的意思)作用	表单动态校验(或者密码强度的检测) 最初目的	网页的特性	服务端的开发(Node.js)	桌面程序	app	控制硬件-物联网	游戏开发(cocos2d-js)组成	- ECMAScript: 基础语法	- DOM: 文档数据模型	- BOM: 浏览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript入门">
+<meta property="og:url" content="http://example.com/2023/04/20/JavaScript/index.html">
+<meta property="og:site_name" content="黎功浩个人博客">
+<meta property="og:description" content="JavaScript概念及入门scanner1234567891011121314概念	一种运行在客户端的脚本语言(script就是脚本的意思)作用	表单动态校验(或者密码强度的检测) 最初目的	网页的特性	服务端的开发(Node.js)	桌面程序	app	控制硬件-物联网	游戏开发(cocos2d-js)组成	- ECMAScript: 基础语法	- DOM: 文档数据模型	- BOM: 浏览器">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-20T08:55:23.879Z">
+<meta property="article:modified_time" content="2023-04-20T08:49:55.205Z">
+<meta property="article:author" content="LGH">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.png">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            JavaScript入门 -
+        
+        𝓛𝓖𝓗
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/assets/fonts.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["只因你太美"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":false,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true},"home_banner":{"enable":true,"image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"𝓛𝓲𝓖𝓸𝓷𝓰𝓗𝓪𝓸","subtitle":{"text":["在一个崇高的目的支持下，不停地工作，即使慢，也一定会获得成功","闲暇是霓裳，不宜常穿用"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":85,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/LGHmn","instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":20},"tags":{"Tags":{"icon":"fa-solid fa-tags","path":"tags"}},"categories":{"Categories":{"icon":"fa-solid fa-folder","path":"categories"}},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"CSDN":{"path":"https://blog.csdn.net/lihao121386","icon":"fa-regular fa-hippo"},"滇中引水":{"path":"/dist-v2.5/index.html","icon":"fa-regular fa-droplet"},"筛选":{"icon":"fa-regular fa-sort","submenus":{"选择标签":"tags","选择分类":"categories"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"LH Article":{"path":"/archives","icon":"fa-regular fa-book"}}},"article_date_format":"YYYY-MM-DD","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/redefine-logo.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                𝓛𝓖𝓗
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    target="_blank" rel="noopener" href="https://blog.csdn.net/lihao121386"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-hippo"></i>
+                                        
+                                        CSDN
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/dist-v2.5/index.html"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-droplet"></i>
+                                        
+                                        滇中引水
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-sort"></i>
+                                        
+                                        筛选&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/tags">选择标签
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/categories">选择分类
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        target="_blank" rel="noopener" href="https://blog.csdn.net/lihao121386"  >
+                             
+                                
+                                    <i class="fa-regular fa-hippo"></i>
+                                
+                                CSDN
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/dist-v2.5/index.html"  >
+                             
+                                
+                                    <i class="fa-regular fa-droplet"></i>
+                                
+                                滇中引水
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-sort"></i>
+                                
+                                筛选&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/tags">选择标签</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/categories">选择分类</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+             
+                <div class="article-title">         
+                    <img src="https://s1.ax1x.com/2023/03/02/ppFNasP.jpg" alt="JavaScript入门" />
+                    <h1 class="article-title-cover">JavaScript入门</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">黎功浩</span>
+                            
+                                <span class="author-label">只因你太美</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-04-20 16:55:23</span>
+        <span class="mobile">2023-04-20 16:55</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-04-20 16:49:55</span>
+            <span class="mobile">2023-04-20 16:49</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Javascript/">Javascript</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/JavaScript/">JavaScript</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="概念及入门"><a href="#概念及入门" class="headerlink" title="概念及入门"></a>概念及入门</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	一种运行在客户端的脚本语言(script就是脚本的意思)</span><br><span class="line">作用</span><br><span class="line">	表单动态校验(或者密码强度的检测) 最初目的</span><br><span class="line">	网页的特性</span><br><span class="line">	服务端的开发(Node.js)</span><br><span class="line">	桌面程序</span><br><span class="line">	app</span><br><span class="line">	控制硬件-物联网</span><br><span class="line">	游戏开发(cocos2d-js)</span><br><span class="line">组成</span><br><span class="line">	- ECMAScript: 基础语法</span><br><span class="line">	- DOM: 文档数据模型</span><br><span class="line">	- BOM: 浏览器对象模型</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	本质就是内存中用来存储数据的那一块空间</span><br><span class="line">作用</span><br><span class="line">	存储变化的数据</span><br><span class="line">使用</span><br><span class="line">	1,先声明再赋值</span><br><span class="line">	2,声明的同时赋值</span><br><span class="line">特点</span><br><span class="line">	里面的数据可以修改的</span><br><span class="line">注意点</span><br><span class="line">	变量名不能以数字开头</span><br><span class="line">	严格区分大小写</span><br><span class="line">	变量名不能是关键字或者保留字</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	给数据进行分类,方便管理</span><br><span class="line">分类</span><br><span class="line">	基本数据类型</span><br><span class="line">		- Number: 数字型</span><br><span class="line">        - String: 字符型</span><br><span class="line">        - Boolean: 布尔型</span><br><span class="line">        - Undefined: 未定义</span><br><span class="line">        - Null: 空</span><br><span class="line">    引用数据类型</span><br><span class="line">    	对象 数组</span><br><span class="line">转换</span><br><span class="line">	强制转换</span><br><span class="line">    	String():将参数转成字符串</span><br><span class="line">    	Number():将参数转成数值</span><br><span class="line">    		注意: null 可以和数值进行转换,而undefined不可以</span><br><span class="line">    	Boolean():将参数转成Boolean的结果(true和false)</span><br><span class="line">    		结论: Boolean可以将任意的类型转成true或者false.0 null undefined 空字符串 可以转成fasle 其他都是true</span><br><span class="line"></span><br><span class="line">	自动转换</span><br><span class="line">    	针对于+运算 规律</span><br><span class="line">    		如果+两端有一端是字符,就会执行字符的拼接</span><br><span class="line">    		如果+两端没有一个是字符,就会使用Number()强转,然后再进行加法运算</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">算术运算符</span><br><span class="line">	+ - * / %</span><br><span class="line">自增自减运算符</span><br><span class="line">	++ --</span><br><span class="line">	++在前. 先变量+1,再返回计算后的结果</span><br><span class="line">	++在后  先把变量的值返回,然后变量再加1</span><br><span class="line">	结论:不管++在前还是在后,最终变量的值都会加1</span><br><span class="line"></span><br><span class="line">比较运算符</span><br><span class="line">	&gt; &lt; &gt;= &lt;= == != ===</span><br><span class="line">	结果是boolean类型</span><br><span class="line"></span><br><span class="line">逻辑运算符</span><br><span class="line">	&amp;&amp; ||  !</span><br><span class="line">	结果是boolean类型</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">赋值运算符 基础 = 复合赋值运算 += -= *= /= %= 三元运算符 表达式1 ? 表达式2 :</span><br><span class="line">表达式3</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h2><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if :判断一个条件 if(表达式)&#123; 语句 &#125; if-else :判断一个条件 if(表达式)&#123; 语句</span><br><span class="line">&#125;else&#123; 语句 &#125; if-else-if :判断多个条件 if(表达式1)&#123; 语句1 &#125;else if(表达式2)&#123;</span><br><span class="line">语句2 &#125; ... else&#123; 语句 &#125; switch :判断多个条件 switch(表达式)&#123; case 值1: 语句1</span><br><span class="line">break case 值2: 语句2 break ... default 语句 break &#125; 应用场景</span><br><span class="line">所有的switch语句都可以使用if语句进行改写,但是所有的if语句不一定能用switch改写</span><br><span class="line">if一般用于范围的判断,switch一般用于等值判断</span><br><span class="line">如果某个场景只有固定几个取值,可以考虑使用switch,语句层次更加清晰</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for for(初始化语句;条件判断语句;循环增量语句)&#123; 循环体语句; &#125; 双重循环</span><br><span class="line">外层循环一次,内层要循环所有次 外层控制行数,内层控制列数 while循环 基本格式</span><br><span class="line">while(表达式)&#123; 语句体 &#125; 完整格式 初始化语句 while(条件判断语句)&#123; 语句体</span><br><span class="line">循环增量语句 &#125; do-while循环 基本格式 do&#123; 语句体 &#125;while(表达式) 完整格式</span><br><span class="line">初始化语句 do&#123; 语句体 循环增量语句 &#125;while(条件判断语句) 区别 while和for</span><br><span class="line">都是先判断条件,在执行循环体 do-while 不管条件是否成立,都会先执行一次循环体</span><br><span class="line">应用场景 循环次数确定的话,建议使用for循环,结构简单</span><br><span class="line">循环次数不确定的话,建议使用while循环</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="两个关键字"><a href="#两个关键字" class="headerlink" title="两个关键字"></a>两个关键字</h2><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">continue 跳过本次循环,继续下一次循环 break 终止当前循环</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	存放数据的容器,方便管理数据</span><br><span class="line">定义及初始化</span><br><span class="line">	var arr = []</span><br><span class="line">	var arr = [1,2,3]</span><br><span class="line">取值</span><br><span class="line">	arr[0]</span><br><span class="line">修改值</span><br><span class="line">	arr[0]=9</span><br><span class="line">新增</span><br><span class="line">	arr[新的索引] = 值</span><br><span class="line">删除</span><br><span class="line">	delete arr[索引]</span><br><span class="line">遍历</span><br><span class="line">	for循环</span><br><span class="line">求和</span><br><span class="line">	思路:遍历然后累加</span><br><span class="line">求最值</span><br><span class="line">	思路:遍历 然后依次拿后面的元素 跟擂台变量进行比较</span><br><span class="line">二维数组</span><br><span class="line">	概念</span><br><span class="line">		数组的数组,本质还是一个数组,只不过里面的元素是数组</span><br><span class="line">	取值</span><br><span class="line">		arr[索引] 取到的是 里面的小数组</span><br><span class="line">		arr[索引][索引]  取到的是 具体的元素</span><br><span class="line">	遍历</span><br><span class="line">		双重循环</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	封装了一段具有特殊功能的代码块</span><br><span class="line">作用</span><br><span class="line">	方便调用</span><br><span class="line">使用</span><br><span class="line">	1,先定义</span><br><span class="line">	2,调用</span><br><span class="line">参数</span><br><span class="line">	相当于一个媒介,调用者可以把要操作的数据通过参数传递到函数内部进行操作</span><br><span class="line">	可以提高程序的灵活性</span><br><span class="line">返回值</span><br><span class="line">	相当于函数将操作完的数据返回给调用者,这样调用者就可以拿到数据进行进一步操作</span><br><span class="line">如何获取函数的参数</span><br><span class="line">	在函数内部,存在一个内置的变量arguments,是个伪数组</span><br><span class="line">分类</span><br><span class="line">	普通函数(带名字)</span><br><span class="line">	匿名函数(没有名字)</span><br><span class="line">注意</span><br><span class="line">	1,如果没有显示的调用return.则方法没有返回值</span><br><span class="line">	2,函数名其实是代表整个函数</span><br><span class="line">	3,实参的个数少于形参,多余形参赋不上值,就是undefined</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	面向过程:完成一件事需要多少个步骤(重点关注在步骤)</span><br><span class="line">	面向对象:完成一件事需要多少个对象(重点是在找对象)</span><br><span class="line">类</span><br><span class="line">	类是对现实生活中具有相同属性和行为的事物的一个统称 (抽象的,相当于是模板)</span><br><span class="line">对象</span><br><span class="line">	现实生活中一个具体的存在 (具体的,通过模板创建出来的)</span><br><span class="line">类和对象关系</span><br><span class="line">	类相当于是模板,对象是通过这个模板创建出来的一个个真实存在的个体</span><br><span class="line">	类中有什么,对象中就有什么</span><br><span class="line">类的三要素</span><br><span class="line">	类名</span><br><span class="line">	属性:类所具有的特征</span><br><span class="line">	行为:类所有具有的功能</span><br><span class="line">类的定义</span><br><span class="line">	function 类名(参数1,参数2)&#123;</span><br><span class="line">		属性的定义</span><br><span class="line">		this.属性名1=参数1</span><br><span class="line">		this.属性名2=参数2</span><br><span class="line">		this.方法名 = function()&#123;</span><br><span class="line">			方法体代码</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">对象的创建</span><br><span class="line">	var 对象名 = new 类名(实际参数1,实际参数2)</span><br><span class="line">调用方法和属性</span><br><span class="line">	对象名.属性名</span><br><span class="line">	对象名.方法名</span><br><span class="line"></span><br><span class="line">new实例化的过程(了解)</span><br><span class="line"></span><br><span class="line">this:谁调用我,我就代表谁</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Math-对象"><a href="#Math-对象" class="headerlink" title="Math 对象"></a>Math 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	数学相关的对象</span><br><span class="line">方法</span><br><span class="line">	Math.PI</span><br><span class="line">	Math.max(1,3,9)</span><br><span class="line">	Math.min(1,3,9)</span><br><span class="line">	Math.abs(-1)</span><br><span class="line">	Math.ceil(1.2)</span><br><span class="line">	Math.floor(1.2)</span><br><span class="line">	Math.round(1.2)</span><br><span class="line">生成随机数</span><br><span class="line">	Math.random() 范围[0,1)</span><br><span class="line">	Math.random()*(max-min+1) + min  范围[min,max]</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Date-对象"><a href="#Date-对象" class="headerlink" title="Date 对象"></a>Date 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	Date 对象用于处理日期和时间。</span><br><span class="line">创建</span><br><span class="line">	var myDate=new Date()</span><br><span class="line">获取年月日</span><br><span class="line">	getFullYear()</span><br><span class="line">	getMonth()</span><br><span class="line">	getDate()</span><br><span class="line">	getDay()</span><br><span class="line">获取时分秒</span><br><span class="line">	getHours()</span><br><span class="line">	getMinutes()</span><br><span class="line">	getSeconds()</span><br><span class="line">获取毫秒值</span><br><span class="line">	getTime()</span><br><span class="line">	+new Date()</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Array-对象"><a href="#Array-对象" class="headerlink" title="Array 对象"></a>Array 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">创建</span><br><span class="line">	var arr1 = []</span><br><span class="line">	var arr2 = new Array()</span><br><span class="line">	var arr3 = new Array(size)</span><br><span class="line">	var arr4 = new Array(元素1,元素2...)</span><br><span class="line">方法</span><br><span class="line">	pop()</span><br><span class="line">	push()</span><br><span class="line">	sort()</span><br><span class="line">	reverse()</span><br><span class="line">	indexOf()</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="String-对象"><a href="#String-对象" class="headerlink" title="String 对象"></a>String 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">查找</span><br><span class="line">	indexOf()</span><br><span class="line">查找指定索引的字符</span><br><span class="line">	charAt()</span><br><span class="line">拼接</span><br><span class="line">	concat()  +</span><br><span class="line">截取</span><br><span class="line">	substr()</span><br><span class="line">替换</span><br><span class="line">	replace()</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Json-对象"><a href="#Json-对象" class="headerlink" title="Json 对象"></a>Json 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">json字符串转js对象  parse()</span><br><span class="line">js对象转json字符串 stringify</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="ECMA-基础语法总结"><a href="#ECMA-基础语法总结" class="headerlink" title="ECMA 基础语法总结"></a>ECMA 基础语法总结</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">	概念</span><br><span class="line">		脚本语言</span><br><span class="line">	组成</span><br><span class="line">		ECMAScript基础语法 DOM BOM</span><br><span class="line">变量</span><br><span class="line">	概念</span><br><span class="line">		内存中存储数据的那块空间</span><br><span class="line">	使用</span><br><span class="line">		var a = 10;</span><br><span class="line">		a = 20</span><br><span class="line">		a</span><br><span class="line">数据类型</span><br><span class="line">	基本数据类型</span><br><span class="line">		字符型</span><br><span class="line">		数值型</span><br><span class="line">		Boolean型</span><br><span class="line">		null</span><br><span class="line">		undefined</span><br><span class="line">	引用数据类型</span><br><span class="line">		类 Math类 Date类 Array类</span><br><span class="line">	转换</span><br><span class="line">		强制转换</span><br><span class="line">			String()</span><br><span class="line">			Number()</span><br><span class="line">			Boolean()</span><br><span class="line">		自动转换</span><br><span class="line">			+ 有一端是字符,就是拼接</span><br><span class="line">			  两端都不是,使用Number()强转再运算</span><br><span class="line">运算符</span><br><span class="line">	算术运算符  + - * / %</span><br><span class="line">	自增自减运算符 ++ --</span><br><span class="line">	比较运算符  &gt; &lt; &gt;= !=  结果是Boolean类型</span><br><span class="line">	逻辑运算符 &amp;&amp; || !  结果也是Boolean类型  短路</span><br><span class="line">	赋值运算符 = += -= *=   区分=和==</span><br><span class="line">	三元运算符 表达式1?表达式2:表达式3</span><br><span class="line">流程控制</span><br><span class="line">	顺序结构</span><br><span class="line">	选择结构</span><br><span class="line">		if</span><br><span class="line">		if-else</span><br><span class="line">		if-else-if 比较多个条件</span><br><span class="line">		switch 等值判断  穿透</span><br><span class="line">	循环结构</span><br><span class="line">		for  循环次数确定</span><br><span class="line">		while  循环次数不确定,条件确定</span><br><span class="line">		do-while</span><br><span class="line">		双重for循环(了解)</span><br><span class="line">数组</span><br><span class="line">	定义</span><br><span class="line">		[]</span><br><span class="line">	取值 和 赋值</span><br><span class="line">		通过索引</span><br><span class="line">	遍历</span><br><span class="line">		for</span><br><span class="line">	操作</span><br><span class="line">		求和 求最值</span><br><span class="line">函数</span><br><span class="line">	概念</span><br><span class="line">		封装了一段具有特定功能的代码块</span><br><span class="line">	定义和调用</span><br><span class="line">		先定义后调用</span><br><span class="line">	参数</span><br><span class="line">		媒介</span><br><span class="line">	返回值</span><br><span class="line">		通过return返回给调用者</span><br><span class="line">	分类</span><br><span class="line">		普通和匿名</span><br><span class="line">对象</span><br><span class="line">	面向对象 概念</span><br><span class="line">	类和对象</span><br><span class="line">	类的三要素</span><br><span class="line">	定义类</span><br><span class="line">	创建对象 new</span><br><span class="line">	调用属性和方法</span><br><span class="line">	创建对象另外一种方式 字面量</span><br><span class="line"></span><br><span class="line">内置对象</span><br><span class="line">	Math</span><br><span class="line">		随机数 Math.random()</span><br><span class="line">	Date</span><br><span class="line">		Date d = new Date()</span><br><span class="line">	Array</span><br><span class="line">		pop()  push()</span><br><span class="line">	String</span><br><span class="line">		substr() replace()</span><br><span class="line">	JSON</span><br><span class="line">		parse()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="DOM-概念"><a href="#DOM-概念" class="headerlink" title="DOM 概念"></a>DOM 概念</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">每个载入浏览器的 HTML 文档都会成为 Document 对象。</span><br><span class="line">Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。</span><br><span class="line"></span><br><span class="line">HTML DOM 定义了访问和操作 HTML 文档的标准方法。</span><br><span class="line">DOM 将 HTML 文档表达为树结构。</span><br><span class="line">HTML DOM 定义了所有 HTML 元素的对象和属性，以及访问它们的方法。</span><br><span class="line"></span><br><span class="line">操作思想</span><br><span class="line">	就是将html页面中的所有组成部分(标签,属性,标签体,注释等)抽取成对象,用面向对象的方式来操作这些东西,因为对象中有属性和方法,比单纯操作字符串要方便的多</span><br><span class="line"></span><br><span class="line">根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：</span><br><span class="line">	整个文档是一个文档节点</span><br><span class="line">	每个 HTML 元素是元素节点</span><br><span class="line">	HTML 元素内的文本是文本节点</span><br><span class="line">	每个 HTML 属性是属性节点</span><br><span class="line">	注释是注释节点</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="DOM-获取元素"><a href="#DOM-获取元素" class="headerlink" title="DOM 获取元素"></a>DOM 获取元素</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">获取单个元素</span><br><span class="line">	getElementById(id的值)</span><br><span class="line">获取多个元素</span><br><span class="line">	getElementByTagName(标签名)</span><br><span class="line">	getElementByClassName(类名)</span><br><span class="line">H5新增--推荐使用</span><br><span class="line">	querySelector(选择器) 第一个元素</span><br><span class="line">	querySelectorAll(选择器))</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="事件入门"><a href="#事件入门" class="headerlink" title="事件入门"></a>事件入门</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">事件通常和js代码一起使用,可以通过事件的发生来执行一段js代码</span><br><span class="line"></span><br><span class="line">三个要素</span><br><span class="line">	1,事件源  		电话                    电动车             按钮</span><br><span class="line">	2,事件   		 电话铃响				  踹                被点了</span><br><span class="line">	3,事件处理程序  铃响之后班主任要做的事情    警报器响(监听器)    点之后弹出弹框</span><br><span class="line"></span><br><span class="line">三个步骤</span><br><span class="line">	1,写一个事件源   		按钮</span><br><span class="line">	2,写一个监听器   		函数</span><br><span class="line">	3,绑定事件源和监听器   用一个属性绑定按钮和监听器</span><br><span class="line">绑定（注册方式）</span><br><span class="line">    传统的注册方式：利用on开头的事件 -- onclick onkeyup</span><br><span class="line">    H5新增的监听注册方式： addEventlistnener（事件名称，匿名函数）</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="DOM-操作属性"><a href="#DOM-操作属性" class="headerlink" title="DOM 操作属性"></a>DOM 操作属性</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设置</span><br><span class="line">	元素对象.属性名 = 属性值</span><br><span class="line">获取</span><br><span class="line">	元素对象.属性名</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="DOM-操作标签体"><a href="#DOM-操作标签体" class="headerlink" title="DOM 操作标签体"></a>DOM 操作标签体</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设置</span><br><span class="line">	元素对象.innerHTML = 值</span><br><span class="line">获取</span><br><span class="line">	元素对象.innerHTML</span><br></pre></td></tr></table></figure></div>
+
+<p>DOM 操作样式</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设置</span><br><span class="line">	元素对象.style.属性名=值</span><br><span class="line">获取</span><br><span class="line">	元素对象.style.属性名</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="焦点事件"><a href="#焦点事件" class="headerlink" title="焦点事件"></a>焦点事件</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onfocus 获得焦点</span><br><span class="line">onblur 失去焦点</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">keydown  按下</span><br><span class="line">keyup	松开</span><br><span class="line">keypress 按下并按着不动 (识别大小写)</span><br><span class="line">事件对象（e）</span><br><span class="line">  本身就存在的，可以给函数一个参数,在函数体里就可以使用，通过他可以获取事件的方式；可以组织标签的默认行为（跳转、提交等）；还可以获取keycode点击的按键；还可以组织事件冒泡；</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	事件开始时是由最具体的元素接收,然后逐级向上传播到DOM最顶层的节点</span><br><span class="line">阻止冒泡</span><br><span class="line">	有的情况下,我们只想让最具体的元素接收事件,而不想让事件向上传递,就可以用事件对象来阻止冒泡</span><br><span class="line">	e.stopPropagation() //停止传播</span><br><span class="line">	如果浏览器的版本比较低,可以采用下面代码</span><br></pre></td></tr></table></figure></div>
+
+<p>![img](C:/Users/23361/Documents/Tencent Files/2336182340/FileRecv/day14*资料下发/day14*资料下发/笔记/day14 课程笔记.assets/9ead631b-adbe-40e8-9553-fddc78d9fec0.jpg)</p>
+<h2 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">createElement(&#x27;元素名称&#x27;)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">appendChild() 在父级节点的子节点后面追加元素</span><br><span class="line">insertBefore() 在父级节点的子节点后面追加元素</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="BOM-简介"><a href="#BOM-简介" class="headerlink" title="BOM 简介"></a>BOM 简介</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	浏览器对象模型</span><br><span class="line">组成</span><br><span class="line">	Window  窗口对象</span><br><span class="line">		Window 对象表示浏览器中打开的窗口。</span><br><span class="line">    Navigator  浏览器对象</span><br><span class="line">    	Navigator 对象包含有关浏览器的信息。</span><br><span class="line">    Screen   屏幕对象</span><br><span class="line">    	Screen 对象包含有关客户端显示屏幕的信息。</span><br><span class="line">    History  历史记录对象</span><br><span class="line">    	History 对象包含用户（在浏览器窗口中）访问过的 URL。</span><br><span class="line">    Location  地址栏对象</span><br><span class="line">    	Location 对象包含有关当前 URL 的信息。</span><br><span class="line">操作原理</span><br><span class="line">	将浏览器各个组成部分抽成对象,以面向的方式去操作,提高开发效率(对象有属性和方法,便于操作)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="window-对象"><a href="#window-对象" class="headerlink" title="window 对象"></a>window 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	窗口对象</span><br><span class="line">方法</span><br><span class="line">	定时器相关的</span><br><span class="line">		setTimeout 定时一次   用clearTimeout清除</span><br><span class="line">		setInterval 循环定时  用clearInterval清除</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="location-对象"><a href="#location-对象" class="headerlink" title="location 对象"></a>location 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。</span><br><span class="line">属性</span><br><span class="line">	location.href  获取</span><br><span class="line">	location.href = 新的url  跳转</span><br><span class="line">方法</span><br><span class="line">	reload() 刷新</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="history-对象"><a href="#history-对象" class="headerlink" title="history 对象"></a>history 对象</h2><div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><figcaption><span>scanner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	包含浏览器的历史</span><br><span class="line">方法</span><br><span class="line">	forward()</span><br><span class="line">	back()</span><br><span class="line">	go()</span><br></pre></td></tr></table></figure></div>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/JavaScript/">#JavaScript</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/04/20/HTML/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">HTML入门</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">JavaScript入门</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%A5%E9%97%A8"><span class="nav-text">概念及入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5"><span class="nav-text">选择语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-text">循环语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">两个关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math-%E5%AF%B9%E8%B1%A1"><span class="nav-text">Math 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-%E5%AF%B9%E8%B1%A1"><span class="nav-text">Date 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-%E5%AF%B9%E8%B1%A1"><span class="nav-text">Array 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-%E5%AF%B9%E8%B1%A1"><span class="nav-text">String 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Json-%E5%AF%B9%E8%B1%A1"><span class="nav-text">Json 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ECMA-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93"><span class="nav-text">ECMA 基础语法总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-%E6%A6%82%E5%BF%B5"><span class="nav-text">DOM 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0"><span class="nav-text">DOM 获取元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%85%A5%E9%97%A8"><span class="nav-text">事件入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-%E6%93%8D%E4%BD%9C%E5%B1%9E%E6%80%A7"><span class="nav-text">DOM 操作属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-%E6%93%8D%E4%BD%9C%E6%A0%87%E7%AD%BE%E4%BD%93"><span class="nav-text">DOM 操作标签体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%A6%E7%82%B9%E4%BA%8B%E4%BB%B6"><span class="nav-text">焦点事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6"><span class="nav-text">键盘事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1"><span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0"><span class="nav-text">创建元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"><span class="nav-text">节点操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BOM-%E7%AE%80%E4%BB%8B"><span class="nav-text">BOM 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#window-%E5%AF%B9%E8%B1%A1"><span class="nav-text">window 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#location-%E5%AF%B9%E8%B1%A1"><span class="nav-text">location 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#history-%E5%AF%B9%E8%B1%A1"><span class="nav-text">history 对象</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">黎功浩</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
+                <br>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.1.2</a>
+        </div>
+        
+        
+        
+            <div id="start_div" style="display:none">
+                2023/4/19 00:00:00
+            </div>
+            <div>
+                LGHBK-已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/navbarShrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/scrollTopBottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/Typed.min.js"></script>
+  <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/plugins/typed.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/tocToggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

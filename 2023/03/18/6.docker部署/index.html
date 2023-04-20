@@ -15,20 +15,32 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/archives/2022/10/"/>
+    <link rel="canonical" href="http://example.com/2023/03/18/6.docker部署/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="黎功浩的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="黎功浩个人博客">
-<meta property="og:url" content="http://example.com/archives/2022/10/index.html">
+        <meta name="description" content="docker镜像打包1.使用指令docker images查看本地的所有镜像 2.使用docker save导出镜像为tar包  打包成功后会在桌面生成一个web.tar文件 xshell将web.tar文件传输给linux1.在xshell软件内创建会话连接linux  2.点击图表打开xftp，拖动本地文件web.tar到linux桌面 linux部分1.输入ls查看所有文件，确保web.ta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="6.linux之docker部署vue项目">
+<meta property="og:url" content="http://example.com/2023/03/18/6.docker%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="黎功浩个人博客">
-<meta property="og:description" content="黎功浩的个人博客">
+<meta property="og:description" content="docker镜像打包1.使用指令docker images查看本地的所有镜像 2.使用docker save导出镜像为tar包  打包成功后会在桌面生成一个web.tar文件 xshell将web.tar文件传输给linux1.在xshell软件内创建会话连接linux  2.点击图表打开xftp，拖动本地文件web.tar到linux桌面 linux部分1.输入ls查看所有文件，确保web.ta">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwGqKO.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwG726.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwGjVH.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwGvad.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwGHxK.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwGLrD.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/ppwGOqe.jpg">
+<meta property="article:published_time" content="2023-03-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-20T08:49:59.623Z">
 <meta property="article:author" content="LGH">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="服务端">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/03/23/ppwGqKO.jpg">
     
     <!--- Icon Part-->
     <link rel="icon" type="image/png" href="/images/redefine-favicon.png" sizes="192x192">
@@ -39,7 +51,7 @@
     
     <title>
         
-            归档: 2022/10 -
+            6.linux之docker部署vue项目 -
         
         𝓛𝓖𝓗
     </title>
@@ -299,112 +311,220 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+             
+                <div class="article-title">         
+                    <img src="https://s1.ax1x.com/2023/03/13/ppQEeGd.jpg" alt="6.linux之docker部署vue项目" />
+                    <h1 class="article-title-cover">6.linux之docker部署vue项目</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">黎功浩</span>
+                            
+                                <span class="author-label">只因你太美</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-03-18</span>
+        <span class="mobile">2023-03-18 00</span>
+        <span class="hover-info">创建</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[11]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='04-20'>
-                <a href="/2023/04/20/1.vue%E6%A0%B8%E5%BF%83/">
-                  <span class="article-title">1.vue核心</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='04-20'>
-                <a href="/2023/04/20/CSS/">
-                  <span class="article-title">CSS入门</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='04-20'>
-                <a href="/2023/04/20/HTML/">
-                  <span class="article-title">HTML入门</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='04-20'>
-                <a href="/2023/04/20/JavaScript/">
-                  <span class="article-title">JavaScript入门</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='04-20'>
-                <a href="/2023/04/20/Docker%20%20ce%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%89%E8%A3%85/">
-                  <span class="article-title">Docker ce的基本安装</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-18'>
-                <a href="/2023/03/18/6.docker%E9%83%A8%E7%BD%B2/">
-                  <span class="article-title">6.linux之docker部署vue项目</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-17'>
-                <a href="/2023/03/17/5.linux%E4%B9%8B%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
-                  <span class="article-title">5.linux之部署环境安装</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-14'>
-                <a href="/2023/03/14/4.docker%E9%83%A8%E7%BD%B2%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                  <span class="article-title">4.docker部署数据库</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-13'>
-                <a href="/2023/03/13/3.docker+vue%E9%83%A8%E7%BD%B2%E5%B0%8F%E7%BB%83%E4%B9%A0/">
-                  <span class="article-title">3.docker+vue部署小练习</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-12'>
-                <a href="/2023/03/12/2.docker%E5%AE%B9%E5%99%A8%E4%BD%BF%E7%94%A8/">
-                  <span class="article-title">2.docker容器使用</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-11'>
-                <a href="/2023/03/11/1.docker%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%89%E8%A3%85/">
-                  <span class="article-title">1.docker入门与安装</span>
-                </a>
-              </li>
-              
-            </ul>
-        </section>
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-04-20 16:49:59</span>
+            <span class="mobile">2023-04-20 16:49</span>
+            <span class="hover-info">更新</span>
+        </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[2]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='10-02'>
-                <a href="/2022/10/02/hello-world/">
-                  <span class="article-title">Hello World</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='10-02'>
-                <a href="/2022/10/02/python%E7%88%AC%E8%99%AB%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A0%81%E4%BC%98%E5%8C%96/">
-                  <span class="article-title">Python 爬虫面向对象编码优化</span>
-                </a>
-              </li>
-              
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/docker/">docker</a>&nbsp;
+                    </li>
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/docker/">docker</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">服务端</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="docker镜像打包"><a href="#docker镜像打包" class="headerlink" title="docker镜像打包"></a>docker镜像打包</h1><p>1.使用指令<code>docker images</code>查看本地的所有镜像<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwGqKO.jpg"
+                      alt="ppwGqKO.jpg"
+                ></p>
+<p>2.使用<code>docker save</code>导出镜像为tar包</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwG726.jpg"
+                      alt="ppwG726.jpg"
+                ></p>
+<p>打包成功后会在桌面生成一个web.tar文件</p>
+<h1 id="xshell将web-tar文件传输给linux"><a href="#xshell将web-tar文件传输给linux" class="headerlink" title="xshell将web.tar文件传输给linux"></a>xshell将web.tar文件传输给linux</h1><p>1.在xshell软件内创建会话连接linux</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwGjVH.jpg"
+                      alt="ppwGjVH.jpg"
+                ></p>
+<p>2.点击图表打开xftp，拖动本地文件web.tar到linux桌面<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwGvad.jpg"
+                      alt="ppwGvad.jpg"
+                ></p>
+<h1 id="linux部分"><a href="#linux部分" class="headerlink" title="linux部分"></a>linux部分</h1><p>1.输入<code>ls</code>查看所有文件，确保web.tar已成功接收<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwGHxK.jpg"
+                      alt="ppwGHxK.jpg"
+                ></p>
+<p>2.<code>docker load</code>读取（解压）web.tar文件<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwGLrD.jpg"
+                      alt="ppwGLrD.jpg"
+                ></p>
+<p>3.<code>docker run</code>运行该镜像</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s1.ax1x.com/2023/03/23/ppwGOqe.jpg"
+                      alt="ppwGOqe.jpg"
+                ></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/docker/">#docker</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">#服务端</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/04/20/Docker%20%20ce%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%89%E8%A3%85/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Docker ce的基本安装</span>
+                                    <span class="post-nav-item">上一篇</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/03/17/5.linux%E4%B9%8B%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">5.linux之部署环境安装</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">6.linux之docker部署vue项目</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker%E9%95%9C%E5%83%8F%E6%89%93%E5%8C%85"><span class="nav-text">docker镜像打包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xshell%E5%B0%86web-tar%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E7%BB%99linux"><span class="nav-text">xshell将web.tar文件传输给linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux%E9%83%A8%E5%88%86"><span class="nav-text">linux部分</span></a></li></ol>
+
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -480,6 +600,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -567,6 +704,8 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/tocToggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/plugins/tabs.js"></script>
     
 </div>
 

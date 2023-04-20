@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="黎功浩">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/04/20/html/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="HTML概念1超文本标记语言，主要用于描述一个页面  操作思想123网页中有很多数据，不同的数据可能需要不同的展示效果，这个时候需要用标签把要操作的数据包裹起来，通过修改标签的属性值来实现标签内数据样式的改变一个标签相当于一个容器，想要修改容器的数据样式，只需要修改容器的属性值就可以实现  特点12345语法非常的宽松标签不区分大小写（建议小写）标签都是预定义好的，每个标签都有特殊含义  语法（组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML入门">
+<meta property="og:url" content="http://example.com/2023/04/20/HTML/index.html">
+<meta property="og:site_name" content="黎功浩个人博客">
+<meta property="og:description" content="HTML概念1超文本标记语言，主要用于描述一个页面  操作思想123网页中有很多数据，不同的数据可能需要不同的展示效果，这个时候需要用标签把要操作的数据包裹起来，通过修改标签的属性值来实现标签内数据样式的改变一个标签相当于一个容器，想要修改容器的数据样式，只需要修改容器的属性值就可以实现  特点12345语法非常的宽松标签不区分大小写（建议小写）标签都是预定义好的，每个标签都有特殊含义  语法（组">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-20T08:55:23.863Z">
+<meta property="article:modified_time" content="2023-04-20T08:49:55.895Z">
+<meta property="article:author" content="LGH">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.png">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            HTML入门 -
+        
+        𝓛𝓖𝓗
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/assets/fonts.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["只因你太美"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":false,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true},"home_banner":{"enable":true,"image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"𝓛𝓲𝓖𝓸𝓷𝓰𝓗𝓪𝓸","subtitle":{"text":["在一个崇高的目的支持下，不停地工作，即使慢，也一定会获得成功","闲暇是霓裳，不宜常穿用"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":85,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/LGHmn","instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":20},"tags":{"Tags":{"icon":"fa-solid fa-tags","path":"tags"}},"categories":{"Categories":{"icon":"fa-solid fa-folder","path":"categories"}},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"CSDN":{"path":"https://blog.csdn.net/lihao121386","icon":"fa-regular fa-hippo"},"滇中引水":{"path":"/dist-v2.5/index.html","icon":"fa-regular fa-droplet"},"筛选":{"icon":"fa-regular fa-sort","submenus":{"选择标签":"tags","选择分类":"categories"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"LH Article":{"path":"/archives","icon":"fa-regular fa-book"}}},"article_date_format":"YYYY-MM-DD","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/redefine-logo.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                𝓛𝓖𝓗
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    target="_blank" rel="noopener" href="https://blog.csdn.net/lihao121386"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-hippo"></i>
+                                        
+                                        CSDN
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/dist-v2.5/index.html"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-droplet"></i>
+                                        
+                                        滇中引水
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-sort"></i>
+                                        
+                                        筛选&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/tags">选择标签
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/categories">选择分类
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        target="_blank" rel="noopener" href="https://blog.csdn.net/lihao121386"  >
+                             
+                                
+                                    <i class="fa-regular fa-hippo"></i>
+                                
+                                CSDN
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/dist-v2.5/index.html"  >
+                             
+                                
+                                    <i class="fa-regular fa-droplet"></i>
+                                
+                                滇中引水
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-sort"></i>
+                                
+                                筛选&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/tags">选择标签</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/categories">选择分类</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+             
+                <div class="article-title">         
+                    <img src="https://s1.ax1x.com/2023/03/02/ppFN0Z8.jpg" alt="HTML入门" />
+                    <h1 class="article-title-cover">HTML入门</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">黎功浩</span>
+                            
+                                <span class="author-label">只因你太美</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-04-20 16:55:23</span>
+        <span class="mobile">2023-04-20 16:55</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-04-20 16:49:55</span>
+            <span class="mobile">2023-04-20 16:49</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/HTML/">HTML</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/HTML/">HTML</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">超文本标记语言，主要用于描述一个页面</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="操作思想"><a href="#操作思想" class="headerlink" title="操作思想"></a>操作思想</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">网页中有很多数据，不同的数据可能需要不同的展示效果，这个时候需要用标签把要操作的数据包裹起来，通过修改标签的属性值来实现标签内数据样式的改变</span><br><span class="line"></span><br><span class="line">一个标签相当于一个容器，想要修改容器的数据样式，只需要修改容器的属性值就可以实现</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法非常的宽松</span><br><span class="line"></span><br><span class="line">标签不区分大小写（建议小写）</span><br><span class="line"></span><br><span class="line">标签都是预定义好的，每个标签都有特殊含义</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="语法（组成）"><a href="#语法（组成）" class="headerlink" title="语法（组成）"></a>语法（组成）</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">标签</span><br><span class="line"> 由尖括号括起来的关键字组成</span><br><span class="line">标签体</span><br><span class="line"> 由开始标签和结束标签中间的所有内容，都叫做标签体，可以是一段普通文本，也可以是其他标签</span><br><span class="line">属性</span><br><span class="line"> 为元素提供更多信息，可以改变元素的样式，以名称和值的方式出现</span><br><span class="line">注释</span><br><span class="line"> 快捷键：ctrl+/</span><br><span class="line">特殊字符</span><br><span class="line"> &amp;nbsp；空格</span><br></pre></td></tr></table></figure></div>
+
+<p>标签分类</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">行级标签</span><br><span class="line"> 如果上一行有空间，就在上一行显示，如果没有空间，才会另起一行显示</span><br><span class="line"> span：默认是不可以换行，主要用于存储少量数据</span><br><span class="line">块级标签</span><br><span class="line"> 不管上一行有没有空间，直接另起一行显示</span><br><span class="line"> div：纯粹的块级元素，可以设置模块的大小颜色</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">文档标签（结构标签）</span><br><span class="line"> &lt;html&gt;</span><br><span class="line">  &lt;head&gt;文档的头部&lt;/head&gt;</span><br><span class="line">  &lt;body&gt;文档的正文&lt;/body&gt;</span><br><span class="line"> &lt;/html&gt;</span><br><span class="line"> 文本相关标签</span><br><span class="line">  标题标签h1-h6</span><br><span class="line">  段落标签p</span><br><span class="line">  字体标签font</span><br><span class="line">  属性 size</span><br><span class="line">  颜色 color</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="格式相关标签"><a href="#格式相关标签" class="headerlink" title="格式相关标签"></a>格式相关标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">水平线标签 &lt;hr/&gt;</span><br><span class="line">换行标签 &lt;br/&gt;</span><br><span class="line">粗体 b strong</span><br><span class="line">斜体 i</span><br><span class="line">下划线 u</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">无序列表 ul（under list）</span><br><span class="line">   列表项 li</span><br><span class="line">有序列表 ol</span><br><span class="line">   列表项 li</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="图片媒体标签"><a href="#图片媒体标签" class="headerlink" title="图片媒体标签"></a>图片媒体标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">图片标签</span><br><span class="line"> 标签名 img</span><br><span class="line"> 重要属性 src图像源文件路径(如果图片和文件在同一目录下，直接使用图片名或者./图片名即可)（如果图片和文件在下一目录下，直接使用图片名或者./目录名/图片名即可）（如果图片和文件在上一目录下，直接使用图片名或者../目录名/图片名即可）</span><br><span class="line"> 其他属性</span><br><span class="line"> alt 图片无法显示提取文字</span><br><span class="line"> width 图片宽度</span><br><span class="line"> height 图片高度</span><br><span class="line">音频标签</span><br><span class="line"> 标签名：audio 音频</span><br><span class="line">         video 视频</span><br><span class="line">         controls 播放控制面板</span><br><span class="line">         height 播放页面的高度</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">标签名 a</span><br><span class="line">  重要的属性</span><br><span class="line">      href 定义要跳转的资源（路径）</span><br><span class="line">  其他属性</span><br><span class="line">      target 定义打开方式</span><br><span class="line">      -blank 在新的窗口打开</span><br><span class="line">      -self 在当前窗口打开（默认）</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="布局相关标签"><a href="#布局相关标签" class="headerlink" title="布局相关标签"></a>布局相关标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">页头：header</span><br><span class="line">页脚：footer</span><br><span class="line">导航：nav</span><br><span class="line">主体：main</span><br><span class="line">侧边栏：aside</span><br><span class="line">独立区域：section</span><br><span class="line">文章：article</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="表单相关标签"><a href="#表单相关标签" class="headerlink" title="表单相关标签"></a>表单相关标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">form 表单标签  定义了表单要提交的范围和提交的地址</span><br><span class="line">	重要的属性</span><br><span class="line">		action  设置表单要提交的地址(默认提交到当前页面)</span><br><span class="line">		method  设置表单要提交的方式(默认是get方式)</span><br><span class="line">			get:把数据拼接到地址栏后面,相对的不安全,只能提交数据量比较小的数据</span><br><span class="line">			post:把数据封装到请求体中,相对的安全,可以提交大量的数据,一般用于文件上传</span><br><span class="line"></span><br><span class="line">input 表单项标签  根据type属性值的不同,呈现不同的样式,让用户输入或者选择</span><br><span class="line">	重要的属性</span><br><span class="line">		type</span><br><span class="line">			text    文本框(默认)</span><br><span class="line">			password 密码框(数据不以明文显示)</span><br><span class="line">			radio   单选框</span><br><span class="line">			checkbox    复选框</span><br><span class="line">			file    文件框(可以用于选择文件用来上传)</span><br><span class="line">			submit  提交按钮(提交页面数据)</span><br><span class="line">			reset   重置按钮(恢复到页面刚打开时的效果)</span><br><span class="line">			button  普通按钮(会配合后面的js一起使用)</span><br><span class="line"></span><br><span class="line">		checked</span><br><span class="line">			checked 单选和复选框的选中</span><br><span class="line"></span><br><span class="line">select 下拉选择框</span><br><span class="line">	option 选择框的选择项标签</span><br><span class="line"></span><br><span class="line">	重要属性</span><br><span class="line">		selected   selected 设置下拉选择框选中状态</span><br><span class="line"></span><br><span class="line">textarea 文本域标签 相当于一个大的文本框,可以换行输入很多东西</span><br><span class="line">	重要数据</span><br><span class="line">		cols    列数</span><br><span class="line">		rows    行数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">通用属性</span><br><span class="line">	name:表单项要想提交到后台,必须要有name属性</span><br><span class="line">		对于单选和复选框,可以使用name属性进行分组</span><br><span class="line">	value:对于单选和复选框,可以指定value属性的值,用于区分用户选择了哪一个选项(否则默认都是on)</span><br><span class="line">		可以设置submit.button,reset等元素的默认值</span><br><span class="line">		下拉选择项option标签如果没有value属性,提交到后台就是option标签体的内容,如果有					value属性,提交到后台就是value属性的值</span><br><span class="line"></span><br><span class="line">h5新增标签</span><br><span class="line">	label   为input 元素定义标注（标记）。</span><br><span class="line">			label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。</span><br><span class="line">			如果您在 label 元素内点击文本，就会触发此控件。</span><br><span class="line">			就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上</span><br><span class="line"></span><br><span class="line">	button  按钮标签(更加见名知意),一般需要指定type属性</span><br><span class="line">			&lt;button&gt; 元素比 &lt;input&gt; 元素更容易使用样式。</span><br><span class="line">			你可以在元素内添加 HTML 内容（像 &lt;em&gt;、&lt;strong&gt; 甚至 &lt;img&gt;），以及 ::after 和 				::before 伪元素来实现复杂的效果，而 &lt;input&gt; 只支持文本内容。</span><br><span class="line">			如果你的按钮不是用于向服务器提交数据，请确保这些按钮的 type 属性设置成 button。</span><br><span class="line">			否则它们被按下后将会向服务器发送数据并加载（可能并不存在的）响应内容，因而可能会破坏当前文档			  的状态form 表单标签 定义表单</span><br><span class="line">			hidden 把不需要用户看到，但是后台又需要的数据，可以通过隐藏域传递给后台</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">相关标签</span><br><span class="line">  table 定义一个表格</span><br><span class="line">  tr 定义表格中的行（table row）</span><br><span class="line">  td 定义表格中的单元格（table date）</span><br><span class="line">  th 定义行中的表头</span><br><span class="line">相关属性</span><br><span class="line">  table--weight 宽度</span><br><span class="line">         height 高度</span><br><span class="line">         border 边框</span><br><span class="line">         cellpadding 规定单元边沿与其内容之间的空白</span><br><span class="line">         cellspacing 规定单元格之间的空白</span><br><span class="line">  tr--align 定义内容的显示方式</span><br><span class="line">  td--rowspan 单元格跨列</span><br><span class="line">      colspan 单元格跨行</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><h2 id="css-概念及入门"><a href="#css-概念及入门" class="headerlink" title="css 概念及入门"></a>css 概念及入门</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">层叠样式表，用于设置样式，布局控制（div+css）</span><br></pre></td></tr></table></figure></div>
+
+<p>区别</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.能实现html属性 所实现不了的样式</span><br><span class="line">2.可以实现标签和样式的分离,提高样式的复用性,页面的其他部分也可以使用</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="css-引入方式"><a href="#css-引入方式" class="headerlink" title="css 引入方式"></a>css 引入方式</h2><p>行内样式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;font style=&quot;font-size: 100px;color: green;&quot;&gt;我是css做的，看我&lt;/font&gt;（内联样式）</span><br><span class="line">特点：简单，耦合性比较强</span><br></pre></td></tr></table></figure></div>
+
+<p>内部样式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        font&#123;</span><br><span class="line">        &quot;font-size: 100px;color: green;&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">  特点：实现了代码和样式的分离，可以在当前页面进行复用</span><br></pre></td></tr></table></figure></div>
+
+<p>外部样式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.将样式抽取到一个css文件中</span><br><span class="line">2.在html中用link标签引入css文件</span><br><span class="line">特点：实现了代码和样式的分离，可以在多个页面进行复用，可以统一网站的风格，比如换皮肤</span><br></pre></td></tr></table></figure></div>
+
+<p>三种引入优先级</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">行内样式的优先级是最高的，因为他只为这一行服务</span><br><span class="line">内部和外部样式的优先级是一样的，谁最后解析显示谁</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="CSS-基本选择器"><a href="#CSS-基本选择器" class="headerlink" title="CSS 基本选择器"></a>CSS 基本选择器</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">作业</span><br><span class="line">  选的指定的元素，给他设置样式</span><br></pre></td></tr></table></figure></div>
+
+<p>id 选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">通过id属性值来选择元素，一般选择的是唯一一个元素（id相当于身份证号，同一页面中，id值不要相同）</span><br><span class="line">格式--#id属性值</span><br></pre></td></tr></table></figure></div>
+
+<p>类选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用</span><br><span class="line">  通过glass属性值来选择元素，一般选择的是一批元素格式</span><br><span class="line">格式</span><br><span class="line">  .class属性值</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>元素（标签）选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用</span><br><span class="line">  通过标签名来选择元素，一般选择的是一批元素格式</span><br><span class="line">格式</span><br><span class="line">  元素名称（标签名）</span><br></pre></td></tr></table></figure></div>
+
+<p>三种选择器优先级</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">行内样式&gt;id选择器&gt;类选择器&gt;元素选择器</span><br><span class="line">结论：具体的优先级高，模糊的优先级低</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="CSS-扩展选择器"><a href="#CSS-扩展选择器" class="headerlink" title="CSS 扩展选择器"></a>CSS 扩展选择器</h5><p>并集选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">  同时选择多个选择器</span><br><span class="line">格式</span><br><span class="line">  选择器a，选择器b</span><br></pre></td></tr></table></figure></div>
+
+<p>交集选择器*</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">  选择同时满足条件的选择器</span><br><span class="line">格式</span><br><span class="line"> 选择器a.选择器b</span><br></pre></td></tr></table></figure></div>
+
+<p>后代选择器*</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作业</span><br><span class="line">  选择某个元素的子孙后代</span><br><span class="line">格式</span><br><span class="line">选择器a 选择器b</span><br></pre></td></tr></table></figure></div>
+
+<p>子选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">  选择某一个元素的子元素</span><br><span class="line">格式</span><br><span class="line">  选择器a&gt;选择器b</span><br></pre></td></tr></table></figure></div>
+
+<p>相邻兄弟选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">  选择某一个元素相邻的下一个元素</span><br><span class="line">格式</span><br><span class="line">  选择器a+选择器b</span><br></pre></td></tr></table></figure></div>
+
+<p>属性选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">  通过属性来选择元素</span><br><span class="line">格式</span><br><span class="line">  [属性名]或者[属性名=属性值]</span><br></pre></td></tr></table></figure></div>
+
+<p>伪类选择器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">作业</span><br><span class="line">  选择同一元素的不同状态</span><br><span class="line">格式</span><br><span class="line">   a:link &#123;color: &#125;		/* 未访问的链接 */</span><br><span class="line">   a:visited &#123;color: &#125;	/* 已访问的链接 */</span><br><span class="line">   a:hover &#123;color: &#125;	/* 鼠标移动到链接上 */</span><br><span class="line">   a:active &#123;color: &#125;	/* 选定的链接 */</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="CSS-常见属性入门"><a href="#CSS-常见属性入门" class="headerlink" title="CSS 常见属性入门"></a>CSS 常见属性入门</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">尺寸属性</span><br><span class="line">  width 宽度</span><br><span class="line">  height 高度</span><br><span class="line">字体属性--font-size 字体大小</span><br><span class="line">边框属性--border</span><br><span class="line">背景属性--background</span><br><span class="line">盒子模型--margin（外边距）</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="文本相关属性"><a href="#文本相关属性" class="headerlink" title="文本相关属性"></a>文本相关属性</h2><p>字体相关</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">字体大小:font-size</span><br><span class="line">	取值:数字+px</span><br><span class="line">字体粗细:font-weight</span><br><span class="line">	正常:normal 或者 400</span><br><span class="line">	加粗:bold 或者 700</span><br><span class="line">字体样式:font-style</span><br><span class="line">	正常:normal</span><br><span class="line">	倾斜:italic</span><br><span class="line">字体系列:font-family</span><br><span class="line">	宋体,仿宋,微软雅黑,隶书....</span><br><span class="line"></span><br><span class="line">字体连写</span><br><span class="line">	font: font-style font-weight font-size  font-family (swsf 稍微舒服)</span><br></pre></td></tr></table></figure></div>
+
+<p>文本样式相关</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">文本颜色</span><br><span class="line">	color</span><br><span class="line">文本水平对齐</span><br><span class="line">	text-align (写在父元素上)</span><br><span class="line">文本装饰线</span><br><span class="line">	text-decoration  none(无)</span><br><span class="line">文本首行缩进</span><br><span class="line">	text-indent</span><br></pre></td></tr></table></figure></div>
+
+<p>line-height 行高</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	控制一行的上下间距</span><br><span class="line">属性名</span><br><span class="line">	line-height</span><br><span class="line">取值</span><br><span class="line">	数字+px</span><br><span class="line">应用</span><br><span class="line">	1,可以让单行文本垂直居中显示(设置 line-height=文字父元素的高度)</span><br><span class="line">	2,在网页精准布局的时候,设置line-height:1,可以取消默认行间距</span><br><span class="line">注意</span><br><span class="line">	行高和font连写的时候,注意覆盖问题</span><br><span class="line">	font: font-style font-weight font-size/line-height  font-family</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="背景相关属性"><a href="#背景相关属性" class="headerlink" title="背景相关属性"></a>背景相关属性</h2><p>background 其他属性</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1,背景颜色</span><br><span class="line">	background-color  或者 background</span><br><span class="line">2,背景图片</span><br><span class="line">	background-image  或者 background</span><br><span class="line">3,背景平铺</span><br><span class="line">	background-repeat</span><br><span class="line">4,背景位置</span><br><span class="line">	background-position</span><br><span class="line"></span><br><span class="line">连写</span><br><span class="line">	background:background-color  background-image background-repeat background-position</span><br></pre></td></tr></table></figure></div>
+
+<p>颜色取值了解</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式一:关键字</span><br><span class="line">方式二:rgb</span><br><span class="line">方式三:rgba</span><br><span class="line">方式四:#16进制</span><br></pre></td></tr></table></figure></div>
+
+<p>精灵图应用</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Ø 场景：项目中将多张小图片，合并成一张大图片，这张大图片称之为精灵图</span><br><span class="line">Ø 优点：减少服务器发送次数，减轻服务器的压力，提高页面加载速度</span><br><span class="line"></span><br><span class="line">使用步骤</span><br><span class="line">1. 创建一个盒子</span><br><span class="line">2. 设置盒子大小为小图片大小</span><br><span class="line">3. 设置精灵图为盒子的背景图片</span><br><span class="line">4. 将小图片左上角坐标 取负值，设置给盒子的background-position：x y</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h2><p>层叠性</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">后写的样式会覆盖先写的样式(相同样式会覆盖,不同的样式就会叠加)</span><br></pre></td></tr></table></figure></div>
+
+<p>继承性</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">子元素会继承父元素文本相关的属性,可以在一定程度上减少代码</span><br><span class="line"></span><br><span class="line">应用场景</span><br><span class="line">	1,直接给ul设置 list-style: none 就可以去掉无序列表中的小圆点</span><br><span class="line">	2,统一浏览器默认文字的大小,直接给body标签设置统一的font-size</span><br></pre></td></tr></table></figure></div>
+
+<p>优先级</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">特点:</span><br><span class="line">	不同的选择器具有不同的优先级,优先级高的选择器样式会覆盖优先级低的选择器样式</span><br><span class="line">公式:</span><br><span class="line">	继承&lt;元素选择器&lt;类选择器&lt;id选择器&lt;行内样式&lt;!important</span><br><span class="line">注意点:</span><br><span class="line">	1,!important 写在属性值的后面,分号的前面</span><br><span class="line">	2,!important 不能提升继承的优先级,只要是继承,优先级最低</span><br><span class="line">	3,实际开发中不建议使用!important</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>行盒和块盒分类</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">万物皆盒子,行级元素对应的是行盒,块级元素对应的是块盒</span><br><span class="line"></span><br><span class="line">- 块盒: 独占一行, 可以设置宽高</span><br><span class="line">	如果不设置宽度,默认和父盒子一样宽</span><br><span class="line">	如果不设置高度,默认是由内容撑开的</span><br><span class="line">	display属性的值默认是block</span><br><span class="line"></span><br><span class="line">- 行盒: 不独占一行, 高度由字体大小撑开</span><br><span class="line">	设置宽高没有效果,宽高是由内容撑大的</span><br><span class="line">	display属性的值默认是inline</span><br><span class="line"></span><br><span class="line">互转</span><br><span class="line">	行级元素-&gt;块级元素 display: block;</span><br><span class="line">	行级元素-&gt;行内块元素 display: inline-block; 可以设置宽高,也可以在一行显示</span><br></pre></td></tr></table></figure></div>
+
+<p>盒子元素的组成</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">边框;border</span><br><span class="line">内边距:padding</span><br><span class="line">外边距:margin</span><br></pre></td></tr></table></figure></div>
+
+<p>盒子的边框详解</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">border-width 边框宽度</span><br><span class="line">border-style 边框样式</span><br><span class="line">border-color 边框颜色</span><br><span class="line"></span><br><span class="line">连写</span><br><span class="line"> border: 2px solid red;</span><br></pre></td></tr></table></figure></div>
+
+<p>新浪导航案例</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">布局顺序</span><br><span class="line">  从外向内，从上往下</span><br><span class="line">设置每一个盒子样式的时候</span><br><span class="line">  1.宽高</span><br><span class="line">  2.辅助的背景颜色</span><br><span class="line">  3.盒子模型部分：border padding margin</span><br><span class="line">  4.其他样式：color font text...</span><br></pre></td></tr></table></figure></div>
+
+<p>盒子大小的初始计算方式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">盒子宽度 = 左边框 + 内容的宽度 + 右边框</span><br><span class="line">盒子高度 = 上边框 + 内容的宽度 + 下边框</span><br><span class="line"></span><br><span class="line">出现的问题</span><br><span class="line">	设置border之后,盒子尺寸会被撑大</span><br><span class="line">解决</span><br><span class="line">	计算多余的大小,手动在内容中减去(手动内减)</span><br></pre></td></tr></table></figure></div>
+
+<p>内边距 padding</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	设置边框与内容区域之间的距离</span><br><span class="line">记忆规则</span><br><span class="line">	从上开始赋值,然后顺时针赋值,如果没有赋值的话,看对面的</span><br><span class="line">只给某一方向设置</span><br><span class="line">	padding-方位词:像素值</span><br></pre></td></tr></table></figure></div>
+
+<p>盒子大小的最终计算方式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">盒子宽度 = 左边框 + 左内边距 + 内容的宽度 + 右内边距 + 右边框</span><br><span class="line">盒子高度 = 上边框 + 上内边距 + 内容的宽度 + 下内边距 +下边框</span><br><span class="line"></span><br><span class="line">出现的问题</span><br><span class="line">	设置padding之后,盒子尺寸也会被撑大</span><br><span class="line">解决</span><br><span class="line">	计算多余的大小,手动在内容中减去(手动内减)</span><br></pre></td></tr></table></figure></div>
+
+<p>盒子尺寸自动内减</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">做法</span><br><span class="line">	给盒子设置属性 box-sizing: border-box;</span><br><span class="line"></span><br><span class="line">好处</span><br><span class="line">	浏览器会自动计算多余大小,自动在内容区域中减去,比手动内减方便</span><br></pre></td></tr></table></figure></div>
+
+<p>外边距 margin</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	设置边框以为的,盒子与盒子之间的距离</span><br><span class="line">记忆规则</span><br><span class="line">	从上开始赋值,然后顺时针赋值,如果没有赋值的话,看对面的</span><br><span class="line">只给某一方向设置</span><br><span class="line">	margin-方位词:像素值</span><br></pre></td></tr></table></figure></div>
+
+<p>清除默认的内边距</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">应用场景:浏览器会默认给部分标签设置默认的margin和padding</span><br><span class="line">但是我们其实不是不需要的,一般在项目开始前就需要先清除这些标签的默认样式</span><br><span class="line"></span><br><span class="line">例如:</span><br><span class="line">	body标签默认有margin : 8</span><br><span class="line">	p标签 默认有上下margin</span><br><span class="line">	ul标签 默认有上下的margin 和 padding-left</span><br><span class="line"></span><br><span class="line">常见的两种设置方式</span><br><span class="line">blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line"> --------------------</span><br><span class="line">* &#123;</span><br><span class="line">	margin: 0;</span><br><span class="line">	padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>外边距正常的情况</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">场景</span><br><span class="line">	水平布局的盒子,左右的margin正常,互不影响</span><br><span class="line">结果</span><br><span class="line">	最终两者间距为左右margin的和</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="外边距合并的情况"><a href="#外边距合并的情况" class="headerlink" title="外边距合并的情况"></a>外边距合并的情况</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">场景</span><br><span class="line">	垂直布局的块级元素,上下的margin会合并</span><br><span class="line">结果</span><br><span class="line">	最终两者的距离为margin的最大值</span><br><span class="line">解决方法</span><br><span class="line">	避免就好</span><br><span class="line">	只给其中一个盒子设置margin就行</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="外边距塌陷的情况"><a href="#外边距塌陷的情况" class="headerlink" title="外边距塌陷的情况"></a>外边距塌陷的情况</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">场景</span><br><span class="line">	互相嵌套的块级元素,子元素的margin-top作用在父元素上</span><br><span class="line">结果</span><br><span class="line">	导致父元素一起往下移动</span><br><span class="line">解决方法</span><br><span class="line">	1,给父元素设置border-top或者padding-top(分隔父子元素的margin-top)</span><br><span class="line">	2,给父元素设置 overflow:hidden</span><br><span class="line">	3,转成行内块元素</span><br><span class="line">	4,设置浮动(推荐)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="行内元素-margin-和-padding-无效情况"><a href="#行内元素-margin-和-padding-无效情况" class="headerlink" title="行内元素 margin 和 padding 无效情况"></a>行内元素 margin 和 padding 无效情况</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景:</span><br><span class="line">	给行内元素设置margin和padding</span><br><span class="line">结果:</span><br><span class="line">	水平方向的 margin和padding布局有效</span><br><span class="line">	垂直方向的 margin和padding布局无效</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	一般页面中的非主体内容可以使用伪元素</span><br><span class="line">区别</span><br><span class="line">	元素:HTML设置的标签</span><br><span class="line">	伪元素:由css模拟出来的标签效果</span><br><span class="line">种类</span><br><span class="line">	::before 在父元素位置的最前面添加一个伪元素</span><br><span class="line">	::after  在父元素位置的最后面添加一个伪元素</span><br><span class="line">注意点</span><br><span class="line">	1,必须设置content属性才能生效</span><br><span class="line">	2,伪元素默认是行内元素</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="标准流"><a href="#标准流" class="headerlink" title="标准流"></a>标准流</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	又称文档流,是浏览器在渲染显示页面的时候默认采用的一个排版规则,规定了应该以何种方式排列元素</span><br><span class="line">常见规则</span><br><span class="line">	块级元素:</span><br><span class="line">		从上到下,垂直布局,独占一行</span><br><span class="line">	行级元素(行内块元素)</span><br><span class="line">		从左到右,水平布局,空间不够才会自动换行</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	早期的作用 图文混排</span><br><span class="line">	现在的作用 网页的布局(让垂直布局的盒子变成水平布局)</span><br><span class="line">使用</span><br><span class="line">	float:left 向左浮动</span><br><span class="line">	float:right 向右浮动</span><br><span class="line">特点</span><br><span class="line">	1,浮动元素会脱离标准流(简称:脱标),在标准流中不占位置,相当于从地面飘向空中</span><br><span class="line">	2,浮动元素比标准流高半个级别,可以覆盖标准流中的元素</span><br><span class="line">	3,下一个浮动的元素,会在上一个浮动的元素后面,进行左右浮动</span><br><span class="line">	4,浮动元素会受到上面元素边界的影响</span><br><span class="line">	5,浮动元素有特殊的显示效果(一行可以显示多个,可以设置宽高)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	根据元素在html中的结构关系来直接查找元素</span><br><span class="line">语法</span><br><span class="line">	n:关键字 取值为 0,1,2,3,4.....</span><br><span class="line">	通过n可以组成常见的公司</span><br><span class="line">        偶数  2n  even</span><br><span class="line">        奇数  2n+1 2n-1 odd</span><br><span class="line">        前5个  -n+5  (注意n必须在前面,不能写成5-n)</span><br><span class="line">        从第5个往后 n+5</span><br><span class="line"> 优势</span><br><span class="line"> 	减少对html中类选择器的依赖,有利于保持代码的整洁</span><br><span class="line"> 场景</span><br><span class="line"> 	常用于查找父级选择器中的子元素</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><p>概念</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">含义</span><br><span class="line">	清除浮动带来的影响(如果子元素浮动了,此时子元素就不能撑开标准流中的块级父元素)</span><br><span class="line">原因</span><br><span class="line">	子元素浮动后脱标--&gt;不占位置</span><br><span class="line">目的</span><br><span class="line">	需要父元素有高度,从而不影响其他网页元素的布局</span><br></pre></td></tr></table></figure></div>
+
+<p>方法 1:直接设置高度</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">操作</span><br><span class="line">	直接设置父元素的高度</span><br><span class="line">特点</span><br><span class="line">	优点:简单粗暴,方便</span><br><span class="line">	缺点:有些布局不能固定父元素的高度,如新闻列表,京东的推荐模块</span><br></pre></td></tr></table></figure></div>
+
+<p>方法 2:额外标签法</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">操作</span><br><span class="line">	1,在父元素内容的最后面添加一个块级元素</span><br><span class="line">	2,给添加的块级元素设置clear:both</span><br><span class="line">特点</span><br><span class="line">	缺点:会在页面中添加额外的标签.会让页面的html结构变的复杂</span><br></pre></td></tr></table></figure></div>
+
+<p>方法 3:单伪元素清除法</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">操作</span><br><span class="line">	用伪元素代替了额外标签</span><br><span class="line"></span><br><span class="line">	初始写法</span><br><span class="line">        .father::after&#123;</span><br><span class="line">            content: &#x27;&#x27;;/* 伪元素必须属性 */</span><br><span class="line">            display: block;/* 默认是行级,需要转成块级元素 */</span><br><span class="line">            clear: both;/* 用来清除浮动影响 */</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">     改进:</span><br><span class="line">       .clearfix::after&#123;</span><br><span class="line">            content: &#x27;&#x27;;</span><br><span class="line">            display: block;</span><br><span class="line">            clear: both;</span><br><span class="line">        &#125;</span><br><span class="line">特点</span><br><span class="line">	优点:项目中常用,直接给标签加上类名clearfix 即可清除浮动</span><br></pre></td></tr></table></figure></div>
+
+<p>方法 4:双伪元素清除法</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">操作</span><br><span class="line">	使用两个伪元素,清除浮动,主要用的是后面一个伪元素</span><br><span class="line"></span><br><span class="line">        /* 双伪元素清除法:固定写法 */</span><br><span class="line">        .clearfix::before,</span><br><span class="line">        .clearfix::after&#123;</span><br><span class="line">            content: &#x27;&#x27;;</span><br><span class="line">            display: table;/* 表格布局方式,类似block,习惯用法 */</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .clearfix::after&#123;</span><br><span class="line">            clear: both;/* 这个才是清除浮动的核心代码 */</span><br><span class="line">        &#125;</span><br><span class="line">特点</span><br><span class="line">	项目中常用,比单伪元素新增了解决外边距塌陷的问题</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><p>简介</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	也是一种布局方式,可以让元素自由摆放在网页的任意位置</span><br><span class="line">应用场景</span><br><span class="line">	可以解决盒子与盒子之间的层叠问题,因为定位之后的元素层级最高,可以层叠在其他盒子上面</span><br><span class="line">	可以放盒子始终固定在屏幕中的某个位置</span><br><span class="line">使用</span><br><span class="line">	1.设置定位的方式:position属性</span><br><span class="line">	2,设置偏移值:水平和垂直就近各取一个</span><br></pre></td></tr></table></figure></div>
+
+<p>相对定位</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	自恋型定位.相对于自己之前的位置进行移动</span><br><span class="line">代码</span><br><span class="line">	position: relative</span><br><span class="line">特点</span><br><span class="line">	1,在页面中占位置-&gt;没有脱标</span><br><span class="line">	2,相对于自己原来的位置进行移动</span><br><span class="line">	3,参照坐标原点:原来在标准流的左上角为原点</span><br><span class="line">应用场景</span><br><span class="line">	1,子绝父相(常用定位规律)</span><br><span class="line">	2,用于小范围的移动</span><br></pre></td></tr></table></figure></div>
+
+<p>绝对定位</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	拼爹型定位.相对于最近的有定位的祖先元素进行移动</span><br><span class="line">代码</span><br><span class="line">	posistion: absolute</span><br><span class="line">特点</span><br><span class="line">	1,在页面中不占位置 -&gt; 已经脱标</span><br><span class="line">	2,相对于最近的有定位的祖先元素进行移动</span><br><span class="line">	3,参照坐标原点:</span><br><span class="line">		如果父元素设置了定位,就相对于父元素,以父元素的左上角为坐标原点</span><br><span class="line">		如果父元素没有设置了定位,就一直往上找,最后就相对于body元素,浏览器的左上角为原点</span><br><span class="line">应用场景</span><br><span class="line">	子绝父相(常用定位规律)</span><br></pre></td></tr></table></figure></div>
+
+<p>子绝父相</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">含义</span><br><span class="line">	子元素是绝对定位,父元素是相对定位</span><br><span class="line">场景</span><br><span class="line">	让子元素相对于父元素进行自由移动</span><br><span class="line">好处</span><br><span class="line">	父元素是相对定位,对网页布局影响最小</span><br><span class="line"></span><br><span class="line">实现水平居中</span><br><span class="line">	1,设置子绝父相</span><br><span class="line">	2,先让子盒子向右移动父盒子的一半</span><br><span class="line">		left:50%</span><br><span class="line">	3,再让子盒子向左移动他自己的一半</span><br><span class="line">		普通做法: margin-left:负的子盒子宽度的一半</span><br><span class="line">			缺点:子盒子宽度改变之后需要重新修改代码</span><br><span class="line">		优化做法:transform: translateX(-50%);</span><br><span class="line">			优点:表示沿着x轴的负方向,移动自己宽度的一半,不需要修改代码</span><br><span class="line"></span><br><span class="line">实现水平垂直居中</span><br><span class="line">	1,设置子绝父相</span><br><span class="line">	2,先让子盒子向右移动父盒子的一半</span><br><span class="line">		left:50%</span><br><span class="line">	3,先让子盒子向下移动父盒子的一半</span><br><span class="line">		top:50%</span><br><span class="line">	4,让盒子往左,往上走自己的一半</span><br><span class="line">	    transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure></div>
+
+<p>固定定位</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	死心眼定位,相对于浏览器进行定位</span><br><span class="line">代码</span><br><span class="line">	position: fixed</span><br><span class="line">特点</span><br><span class="line">	1,在页面中不占位置 -&gt; 已经脱标</span><br><span class="line">	2,相对于浏览器进行定位移动</span><br><span class="line">	3,参考的原点:浏览器左上角为原点</span><br><span class="line">场景</span><br><span class="line">	让盒子固定在屏幕中的某个位置</span><br></pre></td></tr></table></figure></div>
+
+<p>层级关系</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">不同布局方式元素的层级关系</span><br><span class="line">	标准流 &lt; 浮动 &lt; 定位</span><br><span class="line">不同定位之间的层级关系</span><br><span class="line">	相对,绝对,固定,默认层级相同</span><br><span class="line">	Html中写在下面的元素层级更高,会覆盖上面的元素</span><br><span class="line">	可以使用z-index属性更改元素的层级:z-index数字越大,层级越高,不需要更改html结构</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h2><p>作用</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于解决 行内元素/行内块元素 垂直对齐的问题(因为图片和文字在一行之内,一般是基线对齐)</span><br></pre></td></tr></table></figure></div>
+
+<p>常见取值</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baseLine	默认,基线对齐</span><br><span class="line">middle		中部对齐</span><br><span class="line">bottom		底部对齐</span><br></pre></td></tr></table></figure></div>
+
+<p>应用场景</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1,解决img标签下面存在的额外间隙问题</span><br><span class="line">2,解决让img垂直居中问题（对于文本只需要设置line-hight父控件居中，但是对于图片还需要添加vertical-align才能居中）</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="其他效果"><a href="#其他效果" class="headerlink" title="其他效果"></a>其他效果</h2><p>overflow 溢出效果</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">做用</span><br><span class="line">	控制内容溢出部分的显示效果</span><br><span class="line">常见取值</span><br><span class="line">	hidden 溢出部分隐藏</span><br><span class="line">	auto	自动显示</span><br></pre></td></tr></table></figure></div>
+
+<p>元素本身隐藏</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">visibility：hidden 隐藏元素本身，并且在网页中 占位置</span><br><span class="line">display：none 隐藏元素本身，并且在网页中 不占位置</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	用来展示图标,本质是字体</span><br><span class="line">网址</span><br><span class="line">	https://www.iconfont.cn/</span><br><span class="line">使用</span><br><span class="line">	1,引入字体图标的样式</span><br><span class="line">	2,调用图标对应的类名</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="CSS-新特性"><a href="#CSS-新特性" class="headerlink" title="CSS 新特性"></a>CSS 新特性</h2><p>过渡</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">作用</span><br><span class="line">	让元素的样式慢慢的变化</span><br><span class="line">使用</span><br><span class="line">	transition:all 1s</span><br><span class="line">注意</span><br><span class="line">	transition属性给需要过渡的元素本身加</span><br></pre></td></tr></table></figure></div>
+
+<p>位移</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">	transform: translate(水平移动距离, 垂直移动距离);</span><br><span class="line">	transform: translateX()  单独x轴</span><br><span class="line">	transform: translateY()  单独Y轴</span><br><span class="line">取值</span><br><span class="line">	像素值 或者 百分比(百分比想对于他自身的)</span><br></pre></td></tr></table></figure></div>
+
+<p>旋转</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">	transform: rotate(角度);</span><br><span class="line">取值</span><br><span class="line">	正数顺时针 负数逆时针</span><br></pre></td></tr></table></figure></div>
+
+<p>渐变</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">	background-image:linear-gradient(</span><br><span class="line">                颜色1,</span><br><span class="line">                颜色2</span><br><span class="line">            )</span><br><span class="line">取值</span><br><span class="line">	可以是关键字 或者 rgb rgba transparent(透明)</span><br></pre></td></tr></table></figure></div>
+
+<p>动画</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">	先定义动画</span><br><span class="line">	   @keyframes change &#123;</span><br><span class="line">            0%&#123;</span><br><span class="line">                width: 200px;</span><br><span class="line">            &#125;</span><br><span class="line">            100%&#123;</span><br><span class="line">                width: 600px;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     使用动画</span><br><span class="line">     	animation: change 1s infinite;</span><br><span class="line">注意</span><br><span class="line"> 	动画名称和动画时长必须赋值</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="flex-布局"><a href="#flex-布局" class="headerlink" title="flex 布局"></a>flex 布局</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">概念</span><br><span class="line">	一种弹性的布局方式,布局页面更加简单,灵活,避免浮动脱标的影响</span><br><span class="line">组成</span><br><span class="line">	弹性容器(父元素)</span><br><span class="line">	弹性盒子(子元素)</span><br><span class="line">	主轴(默认是水平方向,元素就会水平排布)</span><br><span class="line">	侧轴/交叉轴</span><br><span class="line">使用</span><br><span class="line">	1,需要在父元素上添加display:flex属性</span><br><span class="line">	2,根据需要添加对应轴向的属性实现布局</span><br><span class="line">主轴对齐方式</span><br><span class="line">	justify-content</span><br><span class="line">		flex-start 默认 从左边开始</span><br><span class="line">		center 水平居中</span><br><span class="line">		space-between 间隙就在子元素之间(两边没有间隙)</span><br><span class="line">		space-around 两边有间隙,并且两边的间隙是中间间隙的一半</span><br><span class="line">		space-evenly 间隙等分</span><br><span class="line">侧轴对齐方式</span><br><span class="line">	align-items</span><br><span class="line">		flex-start 默认 从上面开始</span><br><span class="line">		center 垂直居中</span><br><span class="line">		stretch 拉伸 默认(子元素不写高度的情况下)</span><br><span class="line">	align-self</span><br><span class="line">		单独修改某个子级元素的属性</span><br><span class="line">弹性盒子伸缩比</span><br><span class="line">	实现盒子宽度不一样</span><br><span class="line">	flex:数值  取父元素剩余宽度的xx份</span><br><span class="line"></span><br><span class="line">子级元素换行显示</span><br><span class="line">	使用flex-wrap属性</span><br><span class="line">	默认是不换行的,取值为nowrap</span><br><span class="line">	如果需要换行,修改值为wrap</span><br><span class="line"></span><br><span class="line">换行之后,行的对齐方式</span><br><span class="line">	align-content</span><br><span class="line">		center:	居中</span><br><span class="line">		space-around:中间间隙是两边间隙的两倍</span><br><span class="line">		space-between:两边没有间隙</span><br><span class="line">修改轴向</span><br><span class="line">	flex-direction: column  此时主轴就是垂直方向,侧轴就变成水平方向了</span><br><span class="line">	如果要实现水平居中:align-items:center</span><br><span class="line">	如果要实现垂直居中:justify-content:center</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>推荐使用</p>
+<h2 id="浏览器调试技巧"><a href="#浏览器调试技巧" class="headerlink" title="浏览器调试技巧"></a>浏览器调试技巧</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1,打开方式</span><br><span class="line">	右键 -&gt; 检查</span><br><span class="line">2,选择元素</span><br><span class="line">	两种方式</span><br><span class="line">3,控制样式</span><br><span class="line">	修改</span><br><span class="line">	添加</span><br><span class="line">	勾选左边方框</span><br><span class="line">4,特殊情况</span><br><span class="line">	出现删除线</span><br><span class="line">	出现小三角</span><br></pre></td></tr></table></figure></div>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/HTML/">#HTML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/04/20/JavaScript/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">JavaScript入门</span>
+                                    <span class="post-nav-item">上一篇</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/04/20/CSS/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">CSS入门</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">HTML入门</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%80%9D%E6%83%B3"><span class="nav-text">操作思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%EF%BC%88%E7%BB%84%E6%88%90%EF%BC%89"><span class="nav-text">语法（组成）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="nav-text">常用标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E7%9B%B8%E5%85%B3%E6%A0%87%E7%AD%BE"><span class="nav-text">格式相关标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="nav-text">列表标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE"><span class="nav-text">图片媒体标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="nav-text">超链接标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E5%B1%80%E7%9B%B8%E5%85%B3%E6%A0%87%E7%AD%BE"><span class="nav-text">布局相关标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E6%A0%87%E7%AD%BE"><span class="nav-text">表单相关标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="nav-text">表格标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css-%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%A5%E9%97%A8"><span class="nav-text">css 概念及入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-text">css 引入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">CSS 基本选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7"><span class="nav-text">文本相关属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7"><span class="nav-text">背景相关属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-text">CSS 三大特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%90%88%E5%B9%B6%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">外边距合并的情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%A1%8C%E9%99%B7%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">外边距塌陷的情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0-margin-%E5%92%8C-padding-%E6%97%A0%E6%95%88%E6%83%85%E5%86%B5"><span class="nav-text">行内元素 margin 和 padding 无效情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="nav-text">伪元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E6%B5%81"><span class="nav-text">标准流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8"><span class="nav-text">浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">结构伪类选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="nav-text">清除浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D"><span class="nav-text">定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vertical-align"><span class="nav-text">vertical-align</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%95%88%E6%9E%9C"><span class="nav-text">其他效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87"><span class="nav-text">字体图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-text">CSS 新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-%E5%B8%83%E5%B1%80"><span class="nav-text">flex 布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-text">浏览器调试技巧</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">黎功浩</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
+                <br>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.1.2</a>
+        </div>
+        
+        
+        
+            <div id="start_div" style="display:none">
+                2023/4/19 00:00:00
+            </div>
+            <div>
+                LGHBK-已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/navbarShrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/scrollTopBottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/Typed.min.js"></script>
+  <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/plugins/typed.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/tools/tocToggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v2.1.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
